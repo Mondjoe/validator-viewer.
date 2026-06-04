@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Snapshot 603807 Viewer</title>
+  <title>Snapshot Viewer</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,8 +18,23 @@
   </style>
 </head>
 <body>
-  <h1>Snapshot 603807 (PDF)</h1>
-  <iframe src="<iframe src="https://ipfs.io/ipfs/bafybeidlxrcu5mvyuf2uvm5jluo6lro6wu73t3rogmgwdciauhnomcp6xy"></iframe>
-"></iframe>
+
+<h1 id="title"></h1>
+<iframe id="frame"></iframe>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+
+  const pdfMap = {
+    "930187": "https://ipfs.io/ipfs/bafybeidlxrcu5mvyuf2uvm5jluo6lro6wu73t3rogmwdciauhnomcp6xy",
+    "603807": "https://ipfs.io/ipfs/your-other-pdf",
+    "123456": "https://ipfs.io/ipfs/another-pdf"
+  };
+
+  document.getElementById("title").textContent = "Snapshot " + id;
+  document.getElementById("frame").src = pdfMap[id];
+</script>
+
 </body>
 </html>
