@@ -1,0 +1,39 @@
+{
+  "snapshot": "930187",
+  "network": "Base",
+  "orchestrator": {
+    "contract": "0x3e8d5707094422c4c1955209E26834e31Dc1Fd6F",
+    "name": "Thirdwed",
+    "function": "multicall(bytes[] data)",
+    "methodId": "0xac9650d8",
+    "txHash": "0x1a143c4b4d8ff00a14a7e76d2eb8fff8b9ecc3292a7aa04112c4f212ff1a34f6"
+  },
+  "flows": {
+    "fungible": [
+      { "event": "Approval", "token": "USDT", "owner": "0xF5042e6f...", "spender": "0x000000...22734", "value": "0.076841" },
+      { "event": "Approval", "token": "USDT", "owner": "0xF5042e6f...", "spender": "0x000000...22734", "value": "9.040060" },
+      { "event": "SolverCallExecuted", "to": "0x000000...22734", "amount_eth": "0", "refs": ["USDT 8.963219", "ETH marker", "WETH"] },
+      { "event": "Transfer", "token": "USDT", "from": "0xF5042e6f...", "to": "0xf70da9...", "value": "0.076841" },
+      { "event": "Transfer", "token": "USDT", "from": "0xF5042e6f...", "to": "0x526d54...", "value": "8.963219" },
+      { "event": "Transfer", "token": "WETH", "src": "0x526d54...", "dst": "0xEA758C...", "value": "0.002940556707151654" },
+      { "event": "Swap", "pool": "0x526d54...", "out_WETH": "0.002940556707151654", "in_USDT": "8.963219", "fee_USDT": "0.000295" },
+      { "event": "Withdrawal", "token": "WETH→ETH", "src": "0xEA758C...", "value": "0.002940556707151654" },
+      { "event": "SolverNativeTransfer", "to": "0xF5042e6f...", "amount_eth": "0.002940556707151654" },
+      { "event": "SolverNativeTransfer", "to": "0x2B93FD3D...", "amount_eth": "0.002940556707151654" },
+      { "event": "SolverCallExecuted", "to": "0xF5042e6f...", "amount_eth": "0", "recipient": "0x2B93FD3D..." }
+    ],
+    "nft": [
+      {
+        "event": "Transfer",
+        "collection": "SHIBA VOUCHER",
+        "contract": "0xe411a71b4eDDB8A85Be68a53b6ecCe8A9dABfCA5",
+        "tokenId": 345,
+        "from": "0xcec2500B...",
+        "txHash": "0xf7f48d99...",
+        "block": 30803797,
+        "timestamp": "2025-05-28 01:49:01 UTC"
+      }
+    ]
+  },
+  "status": "Anchored"
+}
